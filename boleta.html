@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalle de Boleta</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .info-box {
+        border: 1px solid #ccc;
+        padding: 5px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        display: inline-block;
+      }
+
+      .ticket {
+        width: 100px;
+        height: 100px;
+        background-color: #fff;
+        border: 2px solid #000;
+        border-radius: 50%;
+        display: inline-block;
+        text-align: center;
+        line-height: 100px;
+        margin-right: 10px;
+        position: absolute;
+        top: 50%; /* Centra verticalmente */
+        transform: translateY(-50%);
+      }
+
+      .ticket:nth-child(1) {
+        right: calc(50% - 365px); /* Alinea a la derecha */
+      }
+
+      .ticket:nth-child(2) {
+        right: calc(50% - 235px); /* Alinea a la derecha */
+      }
+
+      .ticket:nth-child(3) {
+        right: calc(50% - 105px); /* Alinea a la derecha */
+      }
+
+      .table td {
+        padding: 0.5rem; /* Ajustar el padding */
+        text-align: center; /* Centrar el texto */
+      }
+
+      .table th {
+        text-align: center; /* Centrar el texto */
+      }
+    </style>
+  </head>
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- MENU PERMANTENTE (CABECERA) -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <img class="logo" src="img/Espadas.png" alt="icono1" />
+          <a class="navbar-brand" href="index.html">GameStore</a>
+          <img class="logo" src="img/Espadas.png" alt="icono2" />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link inicio" aria-current="page" href="index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nosotros" href="nosotros.html">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mis-datos" href="misdatos.html">Mis datos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link cerrar-sesion" href="#" onclick="logout()"
+                  >Cerrar sesión</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link detalle-boleta" href="boleta.html"
+                  >Detalle de boleta</a
+                >
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="¿Qué necesitas?"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Buscar
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div id="footer"></div>
+
+    <div class="container mt-4">
+      <div class="row">
+        <h2>Detalle de Boleta</h2>
+
+        <div class="col">
+          <table id="boleta_tabla_estados" style="float: right">
+            <tr>
+              <td>
+                <div class="ticket" style="right: 35px">ENTREGADO 24/04</div>
+                <div class="ticket" style="right: 145px">DESPACHADO 23/04</div>
+                <div class="ticket" style="right: 260px">VENDIDO 22/04</div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Categoría</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Precio</th>
+            <th scope="col">% Subscriptor</th>
+            <th scope="col">% Oferta</th>
+            <th scope="col">% Descuento Total</th>
+            <th scope="col">Descuento</th>
+            <th scope="col">Precio a Pagar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Productos -->
+          <tr>
+            <td>Juegos</td>
+            <td>The Witcher 3: Wild Hunt</td>
+            <td>$20.000</td>
+            <td>5%</td>
+            <td>10%</td>
+            <td>15%</td>
+            <td>$3.000</td>
+            <td>$17.000</td>
+          </tr>
+          <tr>
+            <td>Accesorios</td>
+            <td>Mouse Gamer</td>
+            <td>$15.000</td>
+            <td>3%</td>
+            <td>5%</td>
+            <td>8%</td>
+            <td>$1.200</td>
+            <td>$13.800</td>
+          </tr>
+          <tr>
+            <td>Consolas</td>
+            <td>Consola XYZ</td>
+            <td>$150.000</td>
+            <td>10%</td>
+            <td>15%</td>
+            <td>25%</td>
+            <td>$37.500</td>
+            <td>$112.500</td>
+          </tr>
+          <tr>
+            <td>Juegos</td>
+            <td>Call of Duty: Modern Warfare</td>
+            <td>$30.000</td>
+            <td>7%</td>
+            <td>12%</td>
+            <td>19%</td>
+            <td>$5.700</td>
+            <td>$24.300</td>
+          </tr>
+          <tr>
+            <td>Periféricos</td>
+            <td>Teclado Mecánico</td>
+            <td>$25.000</td>
+            <td>5%</td>
+            <td>8%</td>
+            <td>13%</td>
+            <td>$3.250</td>
+            <td>$21.750</td>
+          </tr>
+          <tr>
+            <td>Consolas</td>
+            <td>PlayStation 5</td>
+            <td>$300.000</td>
+            <td>8%</td>
+            <td>10%</td>
+            <td>18%</td>
+            <td>$54.000</td>
+            <td>$246.000</td>
+          </tr>
+          <tr>
+            <td>Accesorios</td>
+            <td>Auriculares Gamer</td>
+            <td>$40.000</td>
+            <td>6%</td>
+            <td>8%</td>
+            <td>14%</td>
+            <td>$5.600</td>
+            <td>$34.400</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Cuadros de Precio sin IVA, Valor del IVA y Total a Pagar -->
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="info-box">
+            <h5 class="text-end">Precio sin IVA:</h5>
+            <p class="text-end">$692.350</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="info-box">
+            <h5 class="text-end">Valor del IVA (19%):</h5>
+            <p class="text-end">$131.547</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="info-box">
+            <h5 class="text-end">Total a Pagar:</h5>
+            <p class="text-end">$823.890</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
