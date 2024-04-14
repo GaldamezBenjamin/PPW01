@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameStore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">  
+<style>
+  .album {
+    background-image: url('img/fondoprueba2.jpg');
+    background-repeat: repeat;
+    background-size: cover;
+}
+</style>
+    
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- MENU PERMANTENTE (CABECERA) -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <img class="logo" src="img/Espadas.png" alt="icono1">
+              <a class="navbar-brand" href="index.html">GameStore</a>
+                 <img class="logo" src="img/Espadas.png" alt="icono2">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-auto">
+                  <li class="nav-item">
+                    <a class="nav-link inicio" aria-current="page" href="index_admin.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nosotros" href="nosotros_admin.html">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mis-datos" href="misdatos_admin.html">Mis datos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link admin-panel" href="administracion.html">Panel de Admin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link cerrar-sesion" href="#" onclick="logout()">Cerrar sesión</a>
+                </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="¿Que necesitas?" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <!-- CARRUSEL DE IMAGENES -->
+    <div class="container">
+            <section class="carruselimg">
+                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="img/descuento1.png" class="d-block w-100" alt="">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/descuento2.gif" class="d-block w-100" alt="">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                  </div>
+            </section>
+        </div>
+
+    <!-- PRODUCTOS -->
+    <div class="album py-2 bg-light">
+    <div class="container-fluid">
+      <div id="product-item" class="row">
+        <!-- DIABLO 4-->
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3" data-product-id="1">
+          <div class="card mb-4 box-shadow">
+            <div class="text-center">
+              <a href="ficha.html?id=1"><img src="img/diablo4.webp" class="caratulas" alt="Diablo IV"></a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Diablo IV</h5>
+              <p class="card-text">
+                <div class="lead text-secondary fw-bold">EN OFERTA</div>
+                <br>
+                <div class="lead text-danger">
+                  <span class="sale-real-price fw-bold">$69,990</span>
+                  <span class="sale-offer-price fw-bold">$34,990</span>
+                </div>
+              </p>
+              <a href="#" class="btn btn-primary">Comprar Ahora</a>
+              <a href="#" class="btn btn-primary">Añadir al Carro</a>
+            </div>
+          </div>
+        </div>
+        <!-- RESIDENT EVIL 4 -->
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3" data-product-id="2">
+          <div class="card mb-4 box-shadow">
+            <div class="text-center">
+              <a href="ficha.html?id=2"><img src="img/re4remake.webp" class="caratulas" alt="Resident Evil 4 (REMAKE)"></a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Resident Evil 4 (REMAKE)</h5>
+              <p class="card-text">
+                <div class="lead text-secondary fw-bold">EN OFERTA</div>
+                <br>
+                <div class="lead text-danger">
+                  <span class="sale-real-price fw-bold">$49,990</span>
+                  <span class="sale-offer-price fw-bold">$24,990</span>
+                </div>
+              </p>
+              <a href="#" class="btn btn-primary">Comprar Ahora</a>
+              <a href="#" class="btn btn-primary">Añadir al Carro</a>
+            </div>
+          </div>
+        </div>
+        <!-- DEVIL MAY CRY 5-->
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3" data-product-id="3">
+          <div class="card mb-4 box-shadow">
+            <div class="text-center">
+              <a href="ficha.html?id=3" class="product-image-link">
+                <img src="img/dmc5.webp" class="caratulas" alt="Devil May Cry 5">
+              </a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Devil May Cry 5</h5>
+              <p class="card-text">
+                <div class="lead text-secondary fw-bold">EN OFERTA</div>
+                <br>
+                <div class="lead text-danger">
+                  <span class="sale-real-price fw-bold">$19,990</span>
+                  <span class="sale-offer-price fw-bold">$9,990</span>
+                </div>
+              </p>
+              <a href="#" class="btn btn-primary">Añadir al Carro</a>
+            </div>
+          </div>
+        </div>
+        <!-- GOD OF WAR (2018) -->
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3" data-product-id="4">
+          <div class="card mb-4 box-shadow">
+            <div class="text-center">
+              <a href="ficha.html?id=4"><img src="img/godofwar.jpg" class="caratulas" alt="God of War (2018)"></a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">God of War (2018)</h5>
+              <p class="card-text">
+                <div class="lead text-secondary fw-bold">EN OFERTA</div>
+                <br>
+                <div class="lead text-danger">
+                  <span class="sale-real-price fw-bold">$29,990</span>
+                  <span class="sale-offer-price fw-bold">$14,990</span>
+                </div>
+              </p>
+              <a href="#" class="btn btn-primary">Comprar Ahora</a>
+              <a href="#" class="btn btn-primary">Añadir al Carro</a>
+            </div>
+          </div>
+        </div>
+        <!-- GOD OF WAR RAGNAROK -->
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3" data-product-id="5">
+          <div class="card mb-4 box-shadow">
+            <div class="text-center">
+              <a href="ficha.html?id=5"><img src="img/gowragnarok.webp" class="caratulas" alt="God of War RAGNAROK"></a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">God of War RAGNAROK</h5>
+              <p class="card-text">
+                <div class="lead text-secondary fw-bold">EN OFERTA</div>
+                <br>
+                <div class="lead text-danger">
+                  <span class="sale-real-price fw-bold">$59,990</span>
+                  <span class="sale-offer-price fw-bold">$29,990</span>
+                </div>
+              </p>
+              <a href="#" class="btn btn-primary">Comprar Ahora</a>
+              <a href="#" class="btn btn-primary">Añadir al Carro</a>
+            </div>
+          </div>
+        </div>
+        <!-- GRAND THEFT AUTO 5 -->
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3" data-product-id="6">
+          <div class="card mb-4 box-shadow">
+            <div class="text-center">
+              <a href="ficha.html?id=6"><img src="img/gta5.jpg" class="caratulas" alt="Grand Theft Auto 5"></a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Grand Theft Auto 5</h5>
+              <p class="card-text">
+                <div class="lead text-secondary fw-bold">EN OFERTA</div>
+                <br>
+                <div class="lead text-danger">
+                  <span class="sale-real-price fw-bold">$13,990</span>
+                  <span class="sale-offer-price fw-bold">$6,990</span>
+                </div>
+              </p>
+              <a href="#" class="btn btn-primary">Comprar Ahora</a>
+              <a href="#" class="btn btn-primary">Añadir al Carro</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- PIE DE PAGINA (REDES SOCIALES) -->
+    <footer id="footer">
+      <div class="container text-center">
+        <p>
+          <a href="#">Volver al Inicio</a>
+          &nbsp
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+          </svg>
+          Whatsapp: +56983472937
+          &nbsp
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+          </svg>
+          Facebook: GameStore
+        </p>
+      </div>
+    </footer>
+    
+</body>
+</html>

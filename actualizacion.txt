@@ -1,0 +1,1 @@
+---- esta version incluye todas las paginas lista excepto el carrito , los login de usuario y admin listos---g

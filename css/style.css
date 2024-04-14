@@ -1,0 +1,120 @@
+.album {
+    background-image: url('img/fondoprueba2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    text-align: left;
+    color: purple;
+}
+
+.navbar-brand {
+    color: cyan;
+}
+
+.logo {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.carruselimg {
+    width: 900px;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 5px;
+}
+
+.caratulas {
+    height: 400px;
+    margin-bottom: auto;
+}
+
+.sale-real-price {
+    text-decoration: line-through;
+}
+
+.sale-offer-price {
+    color: green;
+}
+
+.container-fluid {
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #0069d9;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.0); /* Cambia el último valor (0.5) para ajustar la transparencia */
+  }
+
+
+  .overlay-window {
+    position: relative;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: #fff;
+    border: 2px solid #000;
+    padding: 10px;
+    border-radius: 4px;
+    max-width: 60%;
+  }
+
+
+  #product-image {
+    content: url(/* imagen del producto con id=1 */);
+  }
+  
+  #product-title {
+    content: "/* nombre del producto con id=1 */";
+  }
+  
+  #product-description {
+    content: "/* descripción del producto con id=1 */";
+  }
+  
+  #product-price {
+    content: "$/* precio del producto con id=1 */";
+  }
+
+
+ 
