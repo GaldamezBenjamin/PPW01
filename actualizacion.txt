@@ -1,0 +1,2 @@
+-----En esta versión hemos mejorado la funcionalidad de los botones de usuario y administrador, ahora completamente funcionales sin pagas adicionales. A
+demás, hemos agregado el esperado panel de administración, junto con mejoras estéticas en el índice y en el carrito de compras.------
