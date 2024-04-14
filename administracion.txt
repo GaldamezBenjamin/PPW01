@@ -1,0 +1,1 @@
+--- esta version tiene todas las paginas listas pero falta la union de algunos navbar y estetica---

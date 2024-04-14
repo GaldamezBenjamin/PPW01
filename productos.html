@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantenedor de Productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- MENU PERMANTENTE (CABECERA) -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Mi Sitio Web</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link inicio" aria-current="page" href="index_admin.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nosotros" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mis-datos" href="misdatos_admin.html">Mis datos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link admin-panel" href="administracion.html">Panel de Admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cerrar-sesion" href="#" onclick="logout()">Cerrar sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Mantenedor de Productos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+  <!-- FORMULARIO DE MANTENEDOR DE PRODUCTOS -->
+<div class="container my-5">
+    <h1>Mantenedor de Producto</h1>
+    <form>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="producto-id">ID del Producto</label>
+                    <input type="text" class="form-control" id="producto-id" placeholder="Ingrese el ID del producto">
+                </div>
+                <div class="form-group">
+                    <label for="categoria">Categoría</label>
+                    <input type="text" class="form-control" id="categoria" placeholder="Ingrese la categoría del producto">
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Ingrese el nombre del producto">
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripción</label>
+                    <input type="text" class="form-control" id="descripcion" placeholder="Ingrese la descripción del producto">
+                </div>
+                <div class="form-group">
+                    <label for="precio">Precio</label>
+                    <input type="number" class="form-control" id="precio" placeholder="Ingrese el precio del producto">
+                </div>
+                <div class="form-group">
+                    <label for="descuento-subscriptor">Descuento Subscriptor (%)</label>
+                    <input type="number" class="form-control" id="descuento-subscriptor" placeholder="Ingrese el descuento para subscriptores">
+                </div>
+                <div class="form-group">
+                    <label for="descuento-oferta">Descuento por Oferta (%)</label>
+                    <input type="number" class="form-control" id="descuento-oferta" placeholder="Ingrese el descuento por oferta">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="foto" class="form-label">Fotografía</label>
+                    <div class="d-flex align-items-center">
+                        <img src="#" alt="Foto de perfil" class="img-thumbnail me-3" id="foto-preview" style="width: 150px; height: 150px; object-fit: cover;">
+                        <div>
+                            <button type="button" class="btn btn-primary" id="examinar-foto">Examinar</button>
+                            <input type="file" class="d-none" id="foto-input">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Botones de acción -->
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Botones de acción -->
+            </div>
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-primary">Guardar</button>
+                <button type="button" class="btn btn-secondary">Nuevo</button>
+                <button type="button" class="btn btn-danger">Eliminar</button>
+            </div>
+        </div>
+    </form>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Categoría</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Desc. Subscriptor (%)</th>
+            <th>Desc. Oferta (%)</th>
+            <th>Opciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>001</td>
+            <td>Aventura</td>
+            <td>The Legend of Zelda: Breath of the Wild</td>
+            <td>Explora Hyrule en este galardonado juego de aventuras.</td>
+            <td>$29.999</td>
+            <td>10</td>
+            <td>$2.999</td>
+            <td>
+                <button type="button" class="btn btn-danger">Eliminar</button>
+            </td>
+        </tr>
+        <tr>
+            <td>002</td>
+            <td>Lucha</td>
+            <td>Super Smash Bros. Ultimate</td>
+            <td>Reúne a tus personajes favoritos de Nintendo y lucha en emocionantes batallas.</td>
+            <td>$23.000</td>
+            <td>5</td>
+            <td>$1.150</td>
+            <td>
+                <button type="button" class="btn btn-danger">Eliminar</button>
+            </td>
+        </tr>
+        <tr>
+            <td>003</td>
+            <td>Aventura</td>
+            <td>Red Dead Redemption 2</td>
+            <td>Vive la épica historia del forajido Arthur Morgan en el salvaje oeste.</td>
+            <td>$43.500</td>
+            <td>15</td>
+            <td>$6.525</td>
+            <td>
+                <button type="button" class="btn btn-danger">Eliminar</button>
+            </td>
+        </tr>
+        <tr>
+            <td>004</td>
+            <td>Estrategia</td>
+            <td>Fire Emblem: Three Houses</td>
+            <td>Elige tu casa y lidera a tus alumnos en batallas estratégicas.</td>
+            <td>$49.000</td>
+            <td>10</td>
+            <td>$4.900</td>
+            <td>
+                <button type="button" class="btn btn-danger">Eliminar</button>
+            </td>
+        </tr>
+        <tr>
+            <td>005</td>
+            <td>Aventura</td>
+            <td>The Witcher 3: Wild Hunt</td>
+            <td>Embárcate en una emocionante aventura como el cazador de monstruos Geralt de Rivia.</td>
+            <td>$19.999</td>
+            <td>10</td>
+            <td>$1.999</td>
+            <td>
+                <button type="button" class="btn btn-danger">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
