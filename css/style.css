@@ -1,122 +1,269 @@
-.album {
-    background-image: url('img/fondoprueba2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+/* Estilos para el cuerpo del documento */
+body {
+  position: relative;
+  padding-bottom: 50px;
+  background-image: url(../img/fondoprueba2.jpg);
 }
 
+/* Estilos para los enlaces */
+a {
+  color: greenyellow;
+  font-style: italic;
+}
+
+/* Estilos para los encabezados */
 h1 {
-    text-align: left;
-    color: purple;
+  text-align: left;
+  font-size: 50px;
+  font-weight: bold;
+  color: greenyellow;
 }
 
+/* Estilos para los elementos de navegación */
 .navbar-brand {
-    color: cyan;
+  color: cyan;
 }
 
+/* Estilos para los logos */
 .logo {
-    width: 30px;
-    margin-right: 10px;
+  width: 30px;
+  margin-right: 10px;
 }
 
+/* Estilos para la imagen del carrusel */
 .carruselimg {
-    width: 900px;
-    margin: auto;
-    margin-bottom: 50px;
-    margin-top: 5px;
+  width: 900px;
+  margin: auto;
+  margin-bottom: 50px;
+  margin-top: 5px;
 }
 
+/* Estilos para las carátulas */
 .caratulas {
-    height: 400px;
-    margin-bottom: auto;
+  height: 400px;
+  margin-bottom: auto;
 }
 
+/* Estilos para el precio de venta real */
 .sale-real-price {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
+/* Estilos para el precio de oferta */
 .sale-offer-price {
-    color: green;
+  color: green;
 }
 
+/* Estilos para el contenedor fluido */
 .container-fluid {
-    margin: auto;
-    position: relative;
-    z-index: 1;
+  margin: auto;
+  position: relative;
+  z-index: 1;
 }
 
+/* Estilos para el contenedor de inicio de sesión */
 .login-container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f8f8f8;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilos para los encabezados dentro del contenedor de inicio de sesión */
 .login-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
+/* Estilos para los campos de entrada dentro del contenedor de inicio de sesión */
 .login-container input[type="text"],
 .login-container input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
+/* Estilos para los botones dentro del contenedor de inicio de sesión */
 .login-container button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
+/* Estilos de hover para los botones dentro del contenedor de inicio de sesión */
 .login-container button:hover {
-    background-color: #0069d9;
+  background-color: #0069d9;
 }
 
+/* Estilos para las cartas */
 .card {
-    background-color: rgba(255, 255, 255, 0.0); /* Cambia el último valor (0.5) para ajustar la transparencia */
-  }
+  background-color: rgba(255, 255, 255, 0.2);
+  max-height: 100%;
+}
 
+/* Estilos para las ventanas superpuestas */
+.overlay-window {
+  position: relative;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: #fff;
+  border: 2px solid #000;
+  padding: 10px;
+  border-radius: 4px;
+  max-width: 60%;
+}
 
-  .overlay-window {
-    position: relative;
-    margin-top: 5px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    background-color: #fff;
-    border: 2px solid #000;
-    padding: 10px;
-    border-radius: 4px;
-    max-width: 60%;
-  }
+/* Estilos para la imagen del producto */
+#product-image {
+  content: url(imagen del producto con id=1);
+}
 
+/* Estilos para el título del producto */
+#product-title {
+  content: "/* nombre del producto con id=1 */";
+}
 
-  #product-image {
-    content: url(/* imagen del producto con id=1 */);
-  }
-  
-  #product-title {
-    content: "/* nombre del producto con id=1 */";
-  }
-  
-  #product-description {
-    content: "/* descripción del producto con id=1 */";
-  }
-  
-  #product-price {
-    content: "$/* precio del producto con id=1 */";
-  }
+/* Estilos para la descripción del producto */
+#product-description {
+  content: "/* descripción del producto con id=1 */";
+}
 
-  body {
-    position: relative;
-    padding-bottom: 50px;
-  }
+/* Estilos para el precio del producto */
+#product-price {
+  content: "$/* precio del producto con id=1 */";
+}
+
+/* Estilos para los cuerpos de las cartas */
+.card-body {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Estilos para los títulos de las cartas */
+.card-title {
+  color: white;
+}
+
+/* Estilos para las páginas de registro */
+.pagina-registro {
+  padding-top: 70px;
+}
+
+/* Estilos para los bloques */
+.block {
+  background-color: rgba(68, 68, 68, 0.8);
+  border-radius: 15px;
+}
+
+/* Estilos para los botones de diseño 1 */
+.btn-design1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: greenyellow !important;
+  background-color: #1a1a1a !important;
+}
+
+/* Estilos para los botones de diseño 2 */
+.btn-design2 {
+  background-color: #1a1a1a !important;
+}
+
+/* Estilos para los títulos descriptivos */
+.titledesc {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: greenyellow !important;
+  margin-bottom: 10px;
+}
+
+.titledesc2 {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white !important;
+  margin-bottom: 10px;
+}
+
+/* Estilos para la suscripción */
+.suscripcion {
+  font-size: 12px !important;
+  font-weight: bold !important;
+  margin-bottom: 20px !important;
+  color: greenyellow !important;
+}
+
+/* Estilos para los campos de formulario */
+.form-control {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+/* Estilos para el texto de marcador de posición de los campos de formulario */
+.form-control::placeholder {
+  color: rgb(153, 153, 153);
+  font-style: italic;
+}
+
+/* Estilos para las imágenes de las cartas */
+.card-img-top {
+  height: 150px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.card-footer {
+  margin-top: auto;
+}
+
+.lower-text {
+  font-size: 0.9rem;
+}
+
+h2 {
+  text-align: center;
+}
+
+.info-box {
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.table td {
+  padding: 0.5rem; /* Ajustar el padding */
+  text-align: center; /* Centrar el texto */
+}
+
+.table th {
+  text-align: center; /* Centrar el texto */
+}
+
+.text-terciary {
+  color: rgb(250, 253, 255);
+  font-size: 15px;
+  font-style: italic;
+  margin: 10px 0px 10px 0px;
+}
+
+.img-fluid {
+  width: 250px;
+  height: 300px;
+}

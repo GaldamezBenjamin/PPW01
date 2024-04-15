@@ -52,48 +52,48 @@
 
     <div id="footer"></div>
   
-    <div class="container mt-5">
-      <h2>Mantenedor de Bodega</h2>
+    <div class="container mt-5 block">
+      <h1>Mantenedor de Bodega</h1>
       <form>
           <div class="mb-3 row">
-              <label for="categoria" class="col-md-2 col-form-label">Categoría</label>
+              <label for="categoria" class="col-md-2 col-form-label titledesc">Categoría</label>
               <div class="col-md-4">
                   <input type="text" class="form-control" id="categoria">
               </div>
           </div>
           <div class="mb-3 row">
-              <label for="nombre" class="col-md-2 col-form-label">Nombre</label>
+              <label for="nombre" class="col-md-2 col-form-label titledesc">Nombre</label>
               <div class="col-md-4">
                   <input type="text" class="form-control" id="nombre">
               </div>
           </div>
           <div class="mb-3 row">
-              <label for="cantidad" class="col-md-2 col-form-label">Cantidad</label>
+              <label for="cantidad" class="col-md-2 col-form-label titledesc">Cantidad</label>
               <div class="col-md-4">
                   <input type="number" class="form-control" id="cantidad">
               </div>
           </div>
           <div class="mb-3 row">
-              <label for="foto" class="col-md-2 col-form-label">Fotografía</label>
+              <label for="foto" class="col-md-2 col-form-label titledesc">Fotografía</label>
               <div class="col-md-4 d-flex align-items-center">
+                <img src="#" alt="" class="img-thumbnail me-3" id="foto-preview" style="width: 150px; height: 150px; object-fit: cover; background-color: #1A1A1A;">
                   <div class="flex-grow-1">
-                      <button type="button" class="btn btn-primary me-3" id="examinar-foto">Examinar</button>
+                      <button type="button" class="btn btn-primary btn-design1" id="examinar-foto">Examinar</button>
                       <input type="file" class="d-none" id="foto-input">
                   </div>
-                  <img src="#" alt="Foto de perfil" class="img-thumbnail" id="foto-preview" style="width: 150px; height: 150px; object-fit: cover;">
               </div>
           </div>
           <div class="mb-3 row">
               <div class="col-md-6 offset-md-2">
-                  <button type="button" class="btn btn-primary me-2">Nuevo</button>
-                  <button type="button" class="btn btn-success">Agregar</button>
+                  <button type="button" class="btn btn-primary me-2 btn-design1">Nuevo</button>
+                  <button type="button" class="btn btn-success btn-design1">Agregar</button>
               </div>
           </div>
       </form>
 
-      <h2>LISTA DE PRODUCTOS</h2>
+      <h1>Lista de Productos</h1>
 
-      <table class="table table-bordered">
+      <table class="table table-dark table-bordered">
         <thead>
             <tr>
                 <th>ID</th>
@@ -111,7 +111,7 @@
                 <td>Diablo IV</td>
                 <td>Disponible</td>
                 <td>
-                    <button type="button" class="btn btn-danger">Eliminar</button>
+                    <button type="button" class="btn btn-danger btn-design2">Eliminar</button>
                 </td>
             </tr>
             <tr>
@@ -120,7 +120,7 @@
                 <td>PlayStation 5</td>
                 <td>Disponible</td>
                 <td>
-                    <button type="button" class="btn btn-danger">Eliminar</button>
+                    <button type="button" class="btn btn-danger btn-design2">Eliminar</button>
                 </td>
             </tr>
             <tr>
@@ -129,7 +129,7 @@
                 <td>Auriculares Bluetooth</td>
                 <td>Disponible</td>
                 <td>
-                    <button type="button" class="btn btn-danger">Eliminar</button>
+                    <button type="button" class="btn btn-danger btn-design2">Eliminar</button>
                 </td>
             </tr>
             <tr>
@@ -138,7 +138,7 @@
                 <td>El Hobbit</td>
                 <td>Vendido</td>
                 <td>
-                    <button type="button" class="btn btn-danger">Eliminar</button>
+                    <button type="button" class="btn btn-danger btn-design2">Eliminar</button>
                 </td>
             </tr>
             <tr>
@@ -147,7 +147,7 @@
                 <td>Camiseta Gamer</td>
                 <td>En Bodega</td>
                 <td>
-                    <button type="button" class="btn btn-danger">Eliminar</button>
+                    <button type="button" class="btn btn-danger btn-design2">Eliminar</button>
                 </td>
             </tr>
         </tbody>

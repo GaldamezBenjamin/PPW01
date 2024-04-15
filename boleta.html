@@ -11,51 +11,6 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <style>
-      .info-box {
-        border: 1px solid #ccc;
-        padding: 5px;
-        margin-bottom: 10px;
-        border-radius: 5px;
-        display: inline-block;
-      }
-
-      .ticket {
-        width: 100px;
-        height: 100px;
-        background-color: #fff;
-        border: 2px solid #000;
-        border-radius: 50%;
-        display: inline-block;
-        text-align: center;
-        line-height: 100px;
-        margin-right: 10px;
-        position: absolute;
-        top: 50%; /* Centra verticalmente */
-        transform: translateY(-50%);
-      }
-
-      .ticket:nth-child(1) {
-        right: calc(50% - 365px); /* Alinea a la derecha */
-      }
-
-      .ticket:nth-child(2) {
-        right: calc(50% - 235px); /* Alinea a la derecha */
-      }
-
-      .ticket:nth-child(3) {
-        right: calc(50% - 105px); /* Alinea a la derecha */
-      }
-
-      .table td {
-        padding: 0.5rem; /* Ajustar el padding */
-        text-align: center; /* Centrar el texto */
-      }
-
-      .table th {
-        text-align: center; /* Centrar el texto */
-      }
-    </style>
   </head>
   <body>
     <script
@@ -124,24 +79,45 @@
 
     <div id="footer"></div>
 
+    <div class="col" style="margin: 25px 0px 0px 160px;">
+      <h1>Detalle de boleta</h1>
+    </div>
     <div class="container mt-4">
-      <div class="row">
-        <h2>Detalle de Boleta</h2>
-
-        <div class="col">
-          <table id="boleta_tabla_estados" style="float: right">
+      <div class="col titledesc2">
+        <table id="boleta_tabla_estados" style="float:right">
             <tr>
-              <td>
-                <div class="ticket" style="right: 35px">ENTREGADO 24/04</div>
-                <div class="ticket" style="right: 145px">DESPACHADO 23/04</div>
-                <div class="ticket" style="right: 260px">VENDIDO 22/04</div>
-              </td>
+                <td style="text-align: center;">
+                    <img src="img/vendido.png" alt="" height="50px">
+                    <br>
+                    Vendido
+                    <br>
+                    17/03/2023
+                    <br>
+                    15:32
+                </td>
+                <td style="text-align: center;">
+                    <img src="img/despachado.png" alt="" height="50px">
+                    <br>
+                    Despachado
+                    <br>
+                    18/03/2023
+                    <br>
+                    09:00
+                </td>
+                <td style="text-align: center;">
+                    <img src="img/entregado.png" alt="" height="50px">
+                    <br>
+                    Entregado
+                    <br>
+                    19/03/2023
+                    <br>
+                    09:00
+                </td>
             </tr>
-          </table>
-        </div>
-      </div>
+        </table>
+    </div>
 
-      <table class="table">
+      <table class="table table-dark">
         <thead>
           <tr>
             <th scope="col">Categoría</th>
@@ -229,27 +205,52 @@
         </tbody>
       </table>
 
-      <!-- Cuadros de Precio sin IVA, Valor del IVA y Total a Pagar -->
-      <div class="row mt-4">
-        <div class="col-md-4">
-          <div class="info-box">
-            <h5 class="text-end">Precio sin IVA:</h5>
-            <p class="text-end">$692.350</p>
+        <!-- Datos tributarios -->
+        <div class="row titledesc">
+          <div class="col">
+            <table class="table-dark" style="float: left">
+              <tr>
+                <td>Precio sin IVA</td>
+                <td>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="precio_sin_iva"
+                    id="precio_sin_iva"
+                    value="$692.350"
+                    readonly
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>Valor del IVA (19%)</td>
+                <td>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="valor_del_iva"
+                    id="valor_del_iva"
+                    value="$131.547"
+                    readonly
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>Total a pagar</td>
+                <td>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="total_a_pagar"
+                    id="total_a_pagar"
+                    value="$823.890"
+                    readonly
+                  />
+                </td>
+              </tr>
+            </table>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="info-box">
-            <h5 class="text-end">Valor del IVA (19%):</h5>
-            <p class="text-end">$131.547</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="info-box">
-            <h5 class="text-end">Total a Pagar:</h5>
-            <p class="text-end">$823.890</p>
-          </div>
-        </div>
-      </div>
     </div>
     <script src="js/script.js"></script>
   </body>

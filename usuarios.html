@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
+    <title>Mantenedor de Usuarios</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <style>
@@ -60,54 +60,54 @@
         <h1>Mantenedor de Usuarios</h1>
         <form>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 block">
                     <div class="form-group">
-                        <label for="producto-id">ID del Producto</label>
+                        <label class="titledesc" for="producto-id">ID del Producto</label>
                         <input type="text" class="form-control" id="producto-id" placeholder="Ingrese el ID del producto">
                     </div>
                     <div class="form-group">
-                        <label for="tipo-usuario">Tipo de Usuario</label>
+                        <label class="titledesc" for="tipo-usuario">Tipo de Usuario</label>
                         <select class="form-control" id="tipo-usuario">
                             <option value="cliente">Cliente</option>
                             <option value="administrador">Administrador</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="rut">RUT</label>
+                        <label class="titledesc" for="rut">RUT</label>
                         <input type="text" class="form-control" id="rut" placeholder="Ingrese el RUT">
                     </div>
                     <div class="form-group">
-                        <label for="nombre">Nombre</label>
+                        <label class="titledesc" for="nombre">Nombre</label>
                         <input type="text" class="form-control" id="nombre" placeholder="Ingrese el nombre">
                     </div>
                     <div class="form-group">
-                        <label for="apellido">Apellido</label>
+                        <label class="titledesc" for="apellido">Apellido</label>
                         <input type="text" class="form-control" id="apellido" placeholder="Ingrese el apellido">
                     </div>
-                    <div class="form-group">
-                        <label for="correo">Correo Electrónico</label>
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label class="titledesc" for="correo">Correo Electrónico</label>
                         <input type="email" class="form-control" id="correo" placeholder="Ingrese el correo electrónico">
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 block">
                     <div class="form-group">
-                        <label for="direccion">Dirección</label>
+                        <label class="titledesc" for="direccion">Dirección</label>
                         <input type="text" class="form-control" id="direccion" placeholder="Ingrese la dirección">
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="suscripcion">
-                        <label class="form-check-label" for="suscripcion">Suscripción</label>
+                        <label class="form-check-label suscripcion" for="suscripcion">Suscripción</label>
                     </div>
                     <div class="form-group">
-                        <label for="contrasena">Contraseña</label>
+                        <label class="titledesc" for="contrasena">Contraseña</label>
                         <input type="password" class="form-control" id="contrasena" placeholder="Ingrese la contraseña">
                     </div>
                     <div class="mb-3">
-                        <label for="foto" class="form-label">Fotografía</label>
+                        <label for="foto" class="form-label titledesc">Fotografía</label>
                         <div class="d-flex align-items-center">
-                            <img src="#" alt="Foto de perfil" class="img-thumbnail me-3" id="foto-preview" style="width: 150px; height: 150px; object-fit: cover;">
+                            <img src="#" alt="" class="img-thumbnail me-3" id="foto-preview" style="width: 150px; height: 150px; object-fit: cover; background-color: #1A1A1A;">
                             <div>
-                                <button type="button" class="btn btn-primary" id="examinar-foto">Examinar</button>
+                                <button type="button" class="btn btn-primary btn-design1" id="examinar-foto">Examinar</button>
                                 <input type="file" class="d-none" id="foto-input">
                             </div>
                         </div>
@@ -120,9 +120,9 @@
                     <!-- Botones de acción -->
                 </div>
                 <div class="col-md-6">
-                    <button type="submit" class="btn btn-primary">Guardar</button>
-                    <button type="button" class="btn btn-secondary">Nuevo</button>
-                    <button type="button" class="btn btn-danger">Eliminar</button>
+                    <button type="submit" class="btn btn-primary btn-design1">Guardar</button>
+                    <button type="button" class="btn btn-secondary btn-design1">Nuevo</button>
+                    <button type="button" class="btn btn-danger btn-design1">Eliminar</button>
                 </div>
             </div>
         </form>
@@ -131,8 +131,8 @@
     
 
  <!-- TABLA DE USUARIOS -->
- <div class="table-responsive">
- <table class="table table-striped mt-5 table-sm table-bordered">
+ <div class="container mt-5">
+ <table class="table table-dark table-striped mt-5 table-sm table-bordered tableinfo">
   <thead>
       <tr>
           <th scope="col">ID</th>
@@ -156,7 +156,7 @@
           <td>juan@example.com</td>
           <td>Calle 123, Santiago</td>
           <td>Sí</td>
-          <td><img src="icono.jpg" alt="No encontrado" class="img-thumbnail" style="width: 50px; height: 50px;"></td>
+          <td><img src="icono.jpg" alt="No encontrado" class="img-thumbnail btn-design2" style="width: 50px; height: 50px;"></td>
       </tr>
       <tr>
           <td>2</td>
@@ -167,7 +167,7 @@
           <td>maria@example.com</td>
           <td>Avenida 456, Valparaíso</td>
           <td>No</td>
-          <td><img src="icono.jpg" alt="No encontrado" class="img-thumbnail" style="width: 50px; height: 50px;"></td>
+          <td><img src="icono.jpg" alt="No encontrado" class="img-thumbnail btn-design2" style="width: 50px; height: 50px;"></td>
       </tr>
       <tr>
           <td>3</td>
@@ -178,7 +178,7 @@
           <td>andres@example.com</td>
           <td>Plaza 789, Concepción</td>
           <td>Sí</td>
-          <td><img src="icono.jpg" alt="No encontrado" class="img-thumbnail" style="width: 50px; height: 50px;"></td>
+          <td><img src="icono.jpg" alt="No encontrado" class="img-thumbnail btn-design2" style="width: 50px; height: 50px;"></td>
       </tr>
       <tr>
           <td>4</td>
@@ -189,7 +189,7 @@
           <td>ana@example.com</td>
           <td>Camino 456, La Serena</td>
           <td>No</td>
-          <td><img src="icono.jpg" alt="No encontrado" class="img-thumbnail" style="width: 50px; height: 50px;"></td>
+          <td><img src="icono.jpg" alt="No encontrado" class="img-thumbnail btn-design2" style="width: 50px; height: 50px;"></td>
       </tr>
       <tr>
           <td>5</td>
@@ -200,7 +200,7 @@
           <td>luis@example.com</td>
           <td>Carretera 789, Antofagasta</td>
           <td>Sí</td>
-          <td><img src="icono.jpg" alt="No encontrado" class="img-thumbnail" style="width: 50px; height: 50px;"></td>
+          <td><img src="icono.jpg" alt="No encontrado" class="img-thumbnail btn-design2" style="width: 50px; height: 50px;"></td>
       </tr>
   </tbody>
 </table>

@@ -100,12 +100,45 @@
 
     <div id="footer"></div>
 
-    <!-- Contenido de la página -->
+    <div class="col" style="margin: 25px 0px 0px 160px;">
+      <h1>Detalle de boleta</h1>
+    </div>
     <div class="container mt-4">
-      <h2>Detalle de Boleta</h2>
+      <div class="col titledesc2">
+        <table id="boleta_tabla_estados" style="float:right">
+            <tr>
+                <td style="text-align: center;">
+                    <img src="img/vendido.png" alt="" height="50px">
+                    <br>
+                    Vendido
+                    <br>
+                    17/03/2023
+                    <br>
+                    15:32
+                </td>
+                <td style="text-align: center;">
+                    <img src="img/despachado.png" alt="" height="50px">
+                    <br>
+                    Despachado
+                    <br>
+                    18/03/2023
+                    <br>
+                    09:00
+                </td>
+                <td style="text-align: center;">
+                    <img src="img/entregado.png" alt="" height="50px">
+                    <br>
+                    Entregado
+                    <br>
+                    19/03/2023
+                    <br>
+                    09:00
+                </td>
+            </tr>
+        </table>
+    </div>
 
-      <!-- Tabla de productos -->
-      <table class="table">
+      <table class="table table-dark">
         <thead>
           <tr>
             <th scope="col">Categoría</th>
@@ -193,27 +226,52 @@
         </tbody>
       </table>
 
-      <!-- Cuadros de Precio sin IVA, Valor del IVA y Total a Pagar -->
-      <div class="row mt-4">
-        <div class="col-md-4">
-          <div class="info-box">
-            <h5 class="text-end">Precio sin IVA:</h5>
-            <p class="text-end">$692.350</p>
+        <!-- Datos tributarios -->
+        <div class="row titledesc">
+          <div class="col">
+            <table class="table-dark" style="float: left">
+              <tr>
+                <td>Precio sin IVA</td>
+                <td>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="precio_sin_iva"
+                    id="precio_sin_iva"
+                    value="$692.350"
+                    readonly
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>Valor del IVA (19%)</td>
+                <td>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="valor_del_iva"
+                    id="valor_del_iva"
+                    value="$131.547"
+                    readonly
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>Total a pagar</td>
+                <td>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="total_a_pagar"
+                    id="total_a_pagar"
+                    value="$823.890"
+                    readonly
+                  />
+                </td>
+              </tr>
+            </table>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="info-box">
-            <h5 class="text-end">Valor del IVA (19%):</h5>
-            <p class="text-end">$131.547</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="info-box">
-            <h5 class="text-end">Total a Pagar:</h5>
-            <p class="text-end">$823.89</p>
-          </div>
-        </div>
-      </div>
     </div>
     <script src="js/script.js"></script>
   </body>
