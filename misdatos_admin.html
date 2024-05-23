@@ -1,212 +1,193 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mis Datos</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <style>
-      body {
-        padding-top: 70px;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-          <img class="logo" src="img/Espadas.png" alt="icono1" />
-          <a class="navbar-brand" href="index.html">GameStore</a>
-          <img class="logo" src="img/Espadas.png" alt="icono2" />
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-auto">
-              <li class="nav-item"></li>
-              <li class="nav-item">
-                <a
-                  class="nav-link inicio"
-                  aria-current="page"
-                  href="index_admin.html"
-                  >Inicio</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link nosotros" href="nosotros.html">Nosotros</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mis-compras" href="miscompras.html">Mis compras anteriores</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link carrito" href="carrito.html">Carrito</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link admin-panel" href="administracion.html"
-                  >Panel de Admin</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link cerrar-sesion" href="#" onclick="logout()"
-                  >Cerrar sesión</a
-                >
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="¿Qué necesitas?"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Buscar
-              </button>
-            </form>
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis Datos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      padding-top: 70px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <img class="logo" src="img/Espadas.png" alt="icono1" />
+        <a class="navbar-brand" href="index.html">GameStore</a>
+        <img class="logo" src="img/Espadas.png" alt="icono2" />
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-auto">
+            <li class="nav-item"></li>
+            <li class="nav-item">
+              <a class="nav-link inicio" aria-current="page" href="index_admin.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nosotros" href="nosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mis-compras" href="miscompras.html">Mis compras anteriores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link carrito" href="carrito.html">Carrito</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link admin-panel" href="administracion.html">Panel de Admin</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link cerrar-sesion" href="#" onclick="logout()">Cerrar sesión</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="¿Qué necesitas?" aria-label="Search" />
+            <button class="btn btn-outline-success" type="submit">
+              Buscar
+            </button>
+          </form>
         </div>
-      </nav>
-    </header>
-
-    <div id="footer"></div>
-
-    <main>
-      <div>
-        <h1>Mis Datos</h1>
       </div>
-    
-      <div class="container">
-        <form>
-          <table class="table table-dark tableinfo"
-            style="border-radius: 10px; overflow: hidden; width: 90%; margin: auto;">
-            <tr>
-              <td style="border-bottom: none; width: 75%; vertical-align: top; text-align: left;">
-                <div class="row mb-3">
-                  <label for="rut" class="col-sm-3 col-form-label titledesc">RUT</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control form-control-registro" id="rut"
-                      placeholder="Ingrese su RUT (ej: 12.345.678-9)">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="nombres" class="col-sm-3 col-form-label titledesc">Nombres</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control form-control-registro" id="nombres"
-                      placeholder="Ingrese sus nombres">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="apellidos" class="col-sm-3 col-form-label titledesc">Apellidos</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control form-control-registro" id="apellidos"
-                      placeholder="Ingrese sus apellidos">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="correo" class="col-sm-3 col-form-label titledesc">Correo</label>
-                  <div class="col-sm-9">
-                    <input type="email" class="form-control form-control-registro" id="correo"
-                      placeholder="Ingrese su correo">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="direccion" class="col-sm-3 col-form-label titledesc">Dirección</label>
-                  <div class="col-sm-9">
-                    <textarea class="form-control form-control-registro" id="direccion" placeholder="Ingresa tu dirección"
-                      rows="3"></textarea>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="subscripción" class="col-sm-3 col-form-label titledesc">Con subscripción</label>
-                  <div class="col-sm-9 offset-sm-3">
-                    <div class="form-check" style="margin-top: -38px;">
-                      <label class="form-check-label subscripcion" for="suscripcion">Deseo subscribirme con un aporte
-                        de
-                        $3000
-                        mensuales y obtener un 5% de descuento en mis compras.</label>
-                      <input class="form-check-input" type="checkbox" value="" id="suscripcion">
-                    </div>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="password" class="col-sm-3 col-form-label titledesc">Contraseña</label>
-                  <div class="col-sm-9">
-                    <input type="password" class="form-control form-control-registro" id="password"
-                      placeholder="Contraseña">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="confirm-password" class="col-sm-3 col-form-label titledesc">Repetir contraseña</label>
-                  <div class="col-sm-9">
-                    <input type="password" class="form-control form-control-registro" id="confirm-password"
-                      placeholder="Repetir contraseña">
-                  </div>
-                  <div class="row mb-3" style="margin-top: 20px;">
-                    <div class="col-md-6" style="margin-bottom: -30px;">
-                      <button type="submit" class="btn btn-primary btn-lg btn-design1">Guardar</button>
-                      <button type="button" class="btn btn-warning btn-lg btn-design1 ms-3">Limpiar</button>
-                    </div>
-                  </div>
-                </td>
-              <td style="vertical-align: top;">
-                <div class="row mb-3" style="margin: 10px 0px 0px 0px;">
-                  <div class="mb-3 text-center">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <img src="img/foto_placeholder.png" alt="Fotografía" class="img-thumbnail me-3" id="foto-preview"
-                        style="width: 150px; height: 150px; object-fit: cover; background-color: #1A1A1A;">
-                      <button type="button" class="btn btn-secondary btn-design1 mt-3" id="examinar-foto"
-                        style="margin: 0px 10px 0px 0px;">Examinar</button>
-                      <input type="file" class="d-none" id="foto-input">
-                    </div>
-                  </div>
-                </div>
-              </td>
-            </tr>
-          </table>
-        </form>
-      </div>
-    </main>
+    </nav>
+  </header>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      // Código JavaScript para manejar la subida de la foto
-      const examinarFotoBtn = document.getElementById("examinar-foto");
-      const fotoInput = document.getElementById("foto-input");
-      const fotoPreview = document.getElementById("foto-preview");
+  <div id="footer"></div>
 
-      examinarFotoBtn.addEventListener("click", () => {
-        fotoInput.click();
-      });
+  <main>
+    <div>
+      <h1>Mis Datos</h1>
+    </div>
 
-      fotoInput.addEventListener("change", () => {
-        const file = fotoInput.files[0];
-        if (file) {
-          const reader = new FileReader();
-          reader.onload = function (e) {
-            fotoPreview.src = e.target.result;
-          };
-          reader.readAsDataURL(file);
-        }
-      });
-    </script>
-    <script src="js/script.js"></script>
-  </body>
+    <div class="container">
+      <form>
+        <table class="table table-dark tableinfo"
+          style="border-radius: 10px; overflow: hidden; width: 90%; margin: auto;">
+          <tr>
+            <td style="border-bottom: none; width: 75%; vertical-align: top; text-align: left;">
+              <div class="row mb-3">
+                <label for="rut" class="col-sm-3 col-form-label titledesc">RUT</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control form-control-registro" id="rut"
+                    placeholder="Ingrese su RUT (ej: 12.345.678-9)">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="nombres" class="col-sm-3 col-form-label titledesc">Nombres</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control form-control-registro" id="nombres"
+                    placeholder="Ingrese sus nombres">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="apellidos" class="col-sm-3 col-form-label titledesc">Apellidos</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control form-control-registro" id="apellidos"
+                    placeholder="Ingrese sus apellidos">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="correo" class="col-sm-3 col-form-label titledesc">Correo</label>
+                <div class="col-sm-9">
+                  <input type="email" class="form-control form-control-registro" id="correo"
+                    placeholder="Ingrese su correo">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="direccion" class="col-sm-3 col-form-label titledesc">Dirección</label>
+                <div class="col-sm-9">
+                  <textarea class="form-control form-control-registro" id="direccion" placeholder="Ingresa tu dirección"
+                    rows="3"></textarea>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="subscripción" class="col-sm-3 col-form-label titledesc">Con subscripción</label>
+                <div class="col-sm-9 offset-sm-3">
+                  <div class="form-check" style="margin-top: -38px;">
+                    <label class="form-check-label subscripcion" for="suscripcion">Deseo subscribirme con un aporte
+                      de
+                      $3000
+                      mensuales y obtener un 5% de descuento en mis compras.</label>
+                    <input class="form-check-input" type="checkbox" value="" id="suscripcion">
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="password" class="col-sm-3 col-form-label titledesc">Contraseña</label>
+                <div class="col-sm-9">
+                  <input type="password" class="form-control form-control-registro" id="password"
+                    placeholder="Contraseña">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="confirm-password" class="col-sm-3 col-form-label titledesc">Repetir contraseña</label>
+                <div class="col-sm-9">
+                  <input type="password" class="form-control form-control-registro" id="confirm-password"
+                    placeholder="Repetir contraseña">
+                </div>
+                <div class="row mb-3" style="margin-top: 20px;">
+                  <div class="col-md-6" style="margin-bottom: -30px;">
+                    <button type="submit" class="btn btn-primary btn-lg btn-design1">Guardar</button>
+                    <button type="button" class="btn btn-warning btn-lg btn-design1 ms-3">Limpiar</button>
+                  </div>
+                </div>
+            </td>
+            <td style="vertical-align: top;">
+              <div class="row mb-3" style="margin: 10px 0px 0px 0px;">
+                <div class="mb-3 text-center">
+                  <div class="d-flex justify-content-center align-items-center flex-column">
+                    <img src="img/foto_placeholder.png" alt="Fotografía" class="img-thumbnail me-3" id="foto-preview"
+                      style="width: 150px; height: 150px; object-fit: cover; background-color: #1A1A1A;">
+                    <button type="button" class="btn btn-secondary btn-design1 mt-3" id="examinar-foto"
+                      style="margin: 0px 10px 0px 0px;">Examinar</button>
+                    <input type="file" class="d-none" id="foto-input">
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script>
+    // Código JavaScript para manejar la subida de la foto
+    const examinarFotoBtn = document.getElementById("examinar-foto");
+    const fotoInput = document.getElementById("foto-input");
+    const fotoPreview = document.getElementById("foto-preview");
+
+    examinarFotoBtn.addEventListener("click", () => {
+      fotoInput.click();
+    });
+
+    fotoInput.addEventListener("change", () => {
+      const file = fotoInput.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          fotoPreview.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+    integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"
+    integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/script.js"></script>
+</body>
+
 </html>
