@@ -1,11 +1,265 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mantenedor de Productos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .table.table-dark.table-striped.tableinfo td,
+    .table.table-dark.table-striped.tableinfo th {
+      text-align: left;
+    }
+  </style>
 </head>
+
 <body>
-  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <!-- MENU PERMANTENTE (CABECERA) -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <img class="logo" src="img/Espadas.png" alt="icono1">
+        <a class="navbar-brand" href="index.html">GameStore</a>
+        <img class="logo" src="img/Espadas.png" alt="icono2">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link inicio" aria-current="page" href="index_admin.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nosotros" href="nosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mis-datos" href="misdatos_admin.html">Mis datos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link admin-panel" href="administracion.html">Panel de Admin</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link cerrar-sesion" href="#" onclick="logout()">Cerrar sesión</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div id="footer"></div>
+
+  <!-- FORMULARIO DE MANTENEDOR DE PRODUCTOS -->
+  <div>
+    <h1>Mantenedor de Productos</h1>
+  </div>
+
+  <div class="container">
+    <form id="formulario-m-productos">
+      <table class="table table-dark tableinfo"
+        style="border-radius: 10px; overflow: hidden; width: 90%; margin: auto;">
+        <tr>
+          <td style="border-bottom: none; width: 75%; vertical-align: top; text-align: left;">
+            <div class="row mb-3">
+              <label for="rut" class="col-sm-3 col-form-label titledesc">ID</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control form-control-registro" id="idUsuario" name="idUsuario"
+                  placeholder="Ingresar ID del producto">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="categoria" class="col-sm-3 col-form-label titledesc">Categoría</label>
+              <div class="col-sm-9 arrow_fix">
+                <select class="form-select form-control-registro" id="categoria" name="categoria">
+                  <option selected>Acción/Aventura</option>
+                  <option>Shooter</option>
+                  <option>RPG</option>
+                  <option>Estrategia en Tiempo Real</option>
+                  <option>Estrategia por Turnos</option>
+                  <option>Deportes</option>
+                  <option>Puzzle</option>
+                  <option>Plataforma</option>
+                  <option>Survival</option>
+                  <option>Horror</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="nombre" class="col-sm-3 col-form-label titledesc">Nombre</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control form-control-registro" id="nombres" name="nombres"
+                  placeholder="Ingresar nombre del producto">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="descripcion" class="col-sm-3 col-form-label titledesc">Descripción</label>
+              <div class="col-sm-9">
+                <textarea class="form-control form-control-registro" id="descripcion" name="descripcion"
+                  placeholder="Ingresar la descripción del producto" rows="3"></textarea>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="precio" class="col-sm-3 col-form-label titledesc">Precio</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control form-control-registro" id="precio" name="precio"
+                  placeholder="Ingresar el precio del producto">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="desc_subs" class="col-sm-3 col-form-label titledesc">Descuento Subscriptor</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control form-control-registro" id="descSubscriptor"
+                  name="descSubscriptor" placeholder="Ingresar porcentaje de descuento">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="desc_oferta" class="col-sm-3 col-form-label titledesc">Descuento por Oferta</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control form-control-registro" id="descOferta" name="descOferta"
+                  placeholder="Ingresar porcentaje de descuento">
+              </div>
+            </div>
+            <div class="row mb-3" style="margin-top: 50px;">
+              <div class="col-md-6" style="margin-bottom: -20px;">
+                <button type="submit" class="btn btn-primary btn-lg btn-design1">Guardar</button>
+                <button type="button" class="btn btn-warning btn-lg btn-design1 ms-3">Nuevo</button>
+                <button type="button" class="btn btn-danger btn-lg btn-design1 ms-3">Eliminar</button>
+              </div>
+            </div>
+          </td>
+          <td style="vertical-align: top;">
+            <div class="row mb-3" style="margin: 10px 0px 0px 0px;">
+              <div class="mb-3 text-center">
+                <div class="d-flex justify-content-center align-items-center flex-column">
+                  <img src="img/DMC5.jpg" alt="Fotografía" class="img-thumbnail me-3" id="foto-preview"
+                    style="width: 267px; height: 400px; object-fit: cover; background-color: #1A1A1A;">
+                  <button type="button" class="btn btn-secondary btn-design1 mt-3" id="examinar-foto"
+                    style="margin: 0px 10px 0px 0px;">Examinar</button>
+                  <input type="file" class="d-none" id="foto-input">
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+
+  <div class="container mt-5">
+    <table class="table table-dark table-striped mt-5 tableinfo">
+      <thead>
+        <tr>
+          <th style="text-align: center; width: 5%;">ID</th>
+          <th style="text-align: center; width: 10%;">Categoría</th>
+          <th style="text-align: center; width: 20%;">Nombre</th>
+          <th style="text-align: center; width: 30%;">Descripción</th>
+          <th style="text-align: center; width: 10%;">Precio</th>
+          <th style="text-align: center; width: 5%; font-size: 10px;">Desc. Subscriptor (%)</th>
+          <th style="text-align: center; width: 5%; font-size: 10px;">Desc. Oferta (%)</th>
+          <th style="text-align: center; width: 10%;">Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>001</td>
+          <td>Aventura</td>
+          <td>The Legend of Zelda: Breath of the Wild</td>
+          <td>Explora Hyrule en este galardonado juego de aventuras.</td>
+          <td style="text-align: right;">$29.999</td>
+          <td style="text-align: center;">10</td>
+          <td style="text-align: right;">$2.999</td>
+          <td>
+            <button type="button" class="btn btn-danger btn-design2">Eliminar</button>
+          </td>
+        </tr>
+        <tr>
+          <td>002</td>
+          <td>Lucha</td>
+          <td>Super Smash Bros. Ultimate</td>
+          <td>Reúne a tus personajes favoritos de Nintendo y lucha en emocionantes batallas.</td>
+          <td style="text-align: right;">$23.000</td>
+          <td style="text-align: center;">5</td>
+          <td style="text-align: right;">$1.150</td>
+          <td>
+            <button type="button" class="btn btn-danger btn-design2">Eliminar</button>
+          </td>
+        </tr>
+        <tr>
+          <td>003</td>
+          <td>Aventura</td>
+          <td>Red Dead Redemption 2</td>
+          <td>Vive la épica historia del forajido Arthur Morgan en el salvaje oeste.</td>
+          <td style="text-align: right;">$43.500</td>
+          <td style="text-align: center;">15</td>
+          <td style="text-align: right;">$6.525</td>
+          <td>
+            <button type="button" class="btn btn-danger btn-design2">Eliminar</button>
+          </td>
+        </tr>
+        <tr>
+          <td>004</td>
+          <td>Estrategia</td>
+          <td>Fire Emblem: Three Houses</td>
+          <td>Elige tu casa y lidera a tus alumnos en batallas estratégicas.</td>
+          <td style="text-align: right;">$49.000</td>
+          <td style="text-align: center;">10</td>
+          <td style="text-align: right;">$4.900</td>
+          <td>
+            <button type="button" class="btn btn-danger btn-design2">Eliminar</button>
+          </td>
+        </tr>
+        <tr>
+          <td>005</td>
+          <td>Aventura</td>
+          <td>The Witcher 3: Wild Hunt</td>
+          <td>Embárcate en una emocionante aventura como el cazador de monstruos Geralt de Rivia.</td>
+          <td style="text-align: right;">$19.999</td>
+          <td style="text-align: center;">10</td>
+          <td style="text-align: right;">$1.999</td>
+          <td>
+            <button type="button" class="btn btn-danger btn-design2">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    const examinarFotoBtn = document.getElementById("examinar-foto");
+    const fotoInput = document.getElementById("foto-input");
+    const fotoPreview = document.getElementById("foto-preview");
+
+    examinarFotoBtn.addEventListener("click", () => {
+      fotoInput.click();
+    });
+
+    fotoInput.addEventListener("change", () => {
+      const file = fotoInput.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          fotoPreview.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+    integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"
+    integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/script.js">
+  </script>
+
 </body>
+
 </html>
