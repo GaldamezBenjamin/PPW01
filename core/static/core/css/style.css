@@ -1,0 +1,385 @@
+/* Estilos para el cuerpo del documento */
+body {
+  position: relative;
+  padding-bottom: 100px;
+  background-image: url(../img/fondoprueba2.jpg);
+}
+
+/* Estilos para los enlaces */
+a {
+  color: greenyellow;
+  font-style: italic;
+}
+
+/* Estilos para los encabezados */
+h1 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: greenyellow;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+  margin: 20px 0px 25px 0px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+/* Estilos para los elementos de navegación */
+.navbar-brand {
+  color: rgb(0, 188, 212);
+}
+
+/* Estilos para los logos */
+.logo {
+  width: 30px;
+  margin-right: 10px;
+}
+
+/* Estilos para la imagen del carrusel */
+.carruselimg {
+  width: 900px;
+  margin: auto;
+  margin-bottom: 50px;
+  margin-top: 5px;
+}
+
+/* Estilos para las carátulas */
+.caratulas {
+  height: 400px;
+  margin-bottom: auto;
+}
+
+/* Estilos para el precio de venta real */
+.sale-real-price {
+  color: green;
+}
+
+/* Estilos para el precio de oferta */
+.sale-offer-price {
+  color: green;
+  font-size: 16px;
+}
+
+/* Estilos para el contenedor fluido */
+.container-fluid {
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Estilos para el contenedor de inicio de sesión */
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los encabezados dentro del contenedor de inicio de sesión */
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Estilos para los campos de entrada dentro del contenedor de inicio de sesión */
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilos para los botones dentro del contenedor de inicio de sesión */
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilos de hover para los botones dentro del contenedor de inicio de sesión */
+.login-container button:hover {
+  background-color: #0069d9;
+}
+
+/* Establece un contenedor de tarjetas como un flexbox */
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 0px;
+  /* Espaciado vertical entre las tarjetas */
+}
+
+/* Estilos para las cartas */
+.card {
+  background-color: rgba(255, 255, 255, 0.2);
+  flex: 1 1 auto;
+  height: 100%;
+  /* Forzar la altura al 100% */
+}
+
+/* Estilos para las ventanas superpuestas */
+.overlay-window {
+  position: relative;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: #fff;
+  border: 2px solid #000;
+  padding: 10px;
+  border-radius: 4px;
+  max-width: 60%;
+}
+
+/* Estilos para los cuerpos de las cartas */
+.card-body {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-footer {
+  margin-top: auto;
+}
+
+.card-footer .btn {
+  display: block;
+  /* Mostrar los botones en líneas separadas */
+}
+
+/* Estilos para los títulos de las cartas */
+.card-title {
+  color: white;
+}
+
+/* Estilos para las páginas de registro */
+.pagina-registro {
+  padding-top: 70px;
+}
+
+/* Estilos para los bloques */
+.block {
+  background-color: rgba(50, 50, 50, 0.65);
+  border-radius: 15px;
+}
+
+/* Estilos para los botones de diseño 1 */
+.btn-design1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: greenyellow !important;
+  background-color: #1a1a1a !important;
+}
+
+/* Estilos para los botones de diseño 2 */
+.btn-design2 {
+  background-color: #1a1a1a !important;
+}
+
+.btn-design3 {
+  font-weight: bold;
+  color: greenyellow !important;
+  background-color: #1a1a1a !important;
+}
+
+/* Estilos para los títulos descriptivos */
+.titledesc {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: greenyellow !important;
+  margin-bottom: 10px;
+}
+
+.titledesc2 {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white !important;
+  margin-bottom: 10px;
+}
+
+/* Estilos para la suscripción */
+.subscripcion {
+  font-size: 18px !important;
+  font-weight: bold !important;
+  color: greenyellow !important;
+}
+
+/* Estilos para los campos de formulario */
+.form-control {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+/* Estilos para el texto de marcador de posición de los campos de formulario */
+.form-control::placeholder {
+  color: rgb(153, 153, 153);
+  font-style: italic;
+}
+
+/* Estilos para las imágenes de las cartas */
+.card-img-top {
+  height: 150px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.lower-text {
+  font-size: 0.9rem;
+}
+
+h2 {
+  text-align: center;
+}
+
+.info-box {
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.table td {
+  padding: 10px;
+  text-align: center;
+}
+
+.table th {
+  text-align: center;
+}
+
+.tableinfo {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tableinfo tbody td {
+  border-bottom: none;
+  /* Elimina el borde inferior de las celdas */
+}
+
+.table-ficha {
+  border-radius: 10px;
+  overflow: hidden;
+  width: 80%;
+  margin: auto;
+
+  tbody td {
+    border-bottom: none;
+    /* Elimina el borde inferior de las celdas */
+    width: 40%;
+    vertical-align: top;
+    justify-content: center;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.text-terciary {
+  color: rgb(250, 253, 255);
+  font-size: 16px;
+  margin: 10px 0px 10px 0px;
+}
+
+.text-terciary-ficha {
+  color: rgb(250, 253, 255);
+  font-size: 24px;
+  margin: 10px 0px 10px 0px;
+}
+
+.text-oferta {
+  color: rgb(0, 153, 255);
+}
+
+.img-fluid {
+  width: 250px;
+  height: 300px;
+}
+
+.form-control-registro {
+  position: relative;
+  margin: 10px 0px 0px 0px;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.arrow_fix{
+  overflow: hidden;
+  position: relative;
+}
+
+.arrow_fix:after {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid rgb(255, 255, 255);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 27px;
+  content: "";
+}
+
+.error {
+  color: red;
+  font-style: italic;
+  font-weight: bolder;
+  text-align: left;
+}
+
+.text-muted {
+  color: greenyellow !important;
+}
+
+.pagination {
+  --bs-pagination-padding-x: 0.75rem;
+  --bs-pagination-padding-y: 0.375rem;
+  --bs-pagination-font-size: 1rem;
+  --bs-pagination-color: rgb(255 255 255 / 37%);
+  --bs-pagination-bg: var(--bs-body-bg);
+  --bs-pagination-border-width: var(--bs-border-width);
+  --bs-pagination-border-color: var(--bs-border-color);
+  --bs-pagination-border-radius: var(--bs-border-radius);
+  --bs-pagination-hover-color: rgb(255 255 255);
+  --bs-pagination-hover-bg: var(--bs-tertiary-bg);
+  --bs-pagination-hover-border-color: var(--bs-border-color);
+  --bs-pagination-focus-color: rgb(82, 82, 82);
+  --bs-pagination-focus-bg: var(--bs-secondary-bg);
+  --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+  --bs-pagination-active-color: #fff;
+  --bs-pagination-active-bg: rgb(112, 112, 112);
+  --bs-pagination-active-border-color: rgb(112, 112, 112);
+  --bs-pagination-disabled-color: var(--bs-secondary-color);
+  --bs-pagination-disabled-bg: var(--bs-secondary-bg);
+  --bs-pagination-disabled-border-color: var(--bs-border-color);
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+}
+
+div.dataTables_wrapper div.dataTables_info div.dataTables_length div.dataTables_length  div.dataTables_filter {
+  color: gainsboro;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+div.dataTables_wrapper div.dataTables_length select {
+  width: auto;
+  display: inline-block;
+}

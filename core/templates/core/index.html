@@ -1,0 +1,60 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% load custom_filters %}
+
+{% block content %}
+  <div class="container">
+    <section class="carruselimg">
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'core/img/descuento3.png' %}" class="d-block w-100"/>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'core/img/descuento2.gif' %}" class="d-block w-100"/>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'core/img/descuento1.png' %}" class="d-block w-100"/>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="album">
+    <div class="container-fluid">
+      <div class="row align-items-stretch card-wrapper">
+        {% if productos %}
+          {% for producto in productos %}
+          <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="card mb-4 box-shadow">
+              <div class="text-center">
+                <a href="{% url 'ficha' producto.id %}">
+                  <img src="/media/{{ producto.imagen }}" style="width: 100%; height: auto" class="caratulas"/>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">{{ producto.nombre }}</h5>
+                <div class="card-text">
+                  <div class="lead text-oferta fw-bold">{{ producto.html_estado|safe }}</div>
+                  <div class="lead text-terciary">{{ producto.descripcion }}</div>
+                  <br/>
+                </div>
+                <div class="card-footer">
+                  <div class="lead">
+                    <span class="sale-real-price fw-bold">{{ producto.html_precio|safe }}</span>
+                  </div>
+                  <a href="{% url 'ficha' producto.id %}" class="btn btn-dark btn-design1">Comprar Ahora</a>
+                  <a href="{% url 'agregar_producto_al_carrito' producto.id %}" class="btn btn-dark btn-design1">Añadir al Carro</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        {% else %}
+          <h1>No se encontraron productos</h1>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock content %}

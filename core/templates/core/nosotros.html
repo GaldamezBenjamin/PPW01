@@ -1,0 +1,72 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %}
+  <section class="container mt-5 block titledesc">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="{% static 'core/img/walter.jpg' %}" class="img-thumbnail btn-design2" style="height: 300px; margin-top: 20px"/>
+        <p>Benjamin Galdámez</p>
+      </div>
+      <div class="col-md-4">
+        <img src="{% static 'core/img/jesse.jpg' %}" class="img-thumbnail btn-design2" style="height: 300px; margin-top: 20px"/>
+        <p>Sebastian Astudillo.</p>
+      </div>
+      <div class="col-md-4">
+        <img src="{% static 'core/img/gus.jpg' %}" class="img-thumbnail btn-design2" style="height: 300px; margin-top: 20px"/>
+        <p>Matias Castillo</p>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-md-8">
+        <h2>¿Quiénes somos?</h2>
+        <p style="font-weight: normal; color: gainsboro;">
+          Somos una tienda de videojuegos en línea comprometida con brindar la
+          mejor experiencia de compra a nuestros clientes. Nos enorgullece
+          ofrecer una amplia selección de juegos y accesorios para todas las
+          plataformas populares, incluyendo PC, consolas y dispositivos
+          móviles.
+        </p>
+        <p style="font-weight: normal; color: gainsboro;">
+          En GameStore, nos esforzamos por mantener altos estándares de
+          calidad y servicio al cliente. Trabajamos en estrecha colaboración
+          con los principales desarrolladores y distribuidores de la industria
+          de los videojuegos para asegurarnos de que nuestros clientes tengan
+          acceso a los últimos lanzamientos y ofertas especiales.
+        </p>
+        <p style="font-weight: normal; color: gainsboro;">
+          Ya sea que estés buscando un emocionante juego de acción, una
+          aventura épica o un título para disfrutar en familia, tenemos lo que
+          necesitas. Nuestro equipo de expertos en videojuegos está siempre
+          disponible para brindarte recomendaciones personalizadas y responder
+          tus preguntas.
+        </p>
+        <p style="font-weight: normal; color: gainsboro;">
+          ¡Explora nuestra tienda en línea y descubre el mundo de los
+          videojuegos con GameStore!
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h4>Nuestros Estándares</h4>
+        <ul style="font-weight: normal; color: gainsboro;">
+          <li>
+            Calidad: Nos aseguramos de ofrecer productos de calidad de los
+            principales desarrolladores y distribuidores.
+          </li>
+          <li>
+            Variedad: Contamos con una amplia selección de juegos y accesorios
+            para satisfacer las necesidades de todos los jugadores.
+          </li>
+          <li>
+            Servicio al cliente: Nuestro equipo está comprometido en brindar
+            un excelente servicio y atención al cliente.
+          </li>
+          <li>
+            Actualizaciones constantes: Mantenemos nuestra tienda actualizada
+            con los últimos lanzamientos y ofertas especiales.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+{% endblock content %}
