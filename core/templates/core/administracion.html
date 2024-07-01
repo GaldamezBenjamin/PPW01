@@ -1,0 +1,20 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %}
+  <h1 class="text-center mt-5">Administración de tienda</h1>
+  <div class="container">
+    <div class="col-8" style="margin: auto;">
+      <table class="table table-dark tableinfo" style="border-radius: 10px; overflow: hidden; margin: auto;">
+        <tr>
+          <td>
+            <a style="margin-left: 5px;" href="{% url 'usuarios' 'crear' '0' %}" class="btn btn-secondary btn-design1">Mantenedor de usuarios</a>
+            <a style="margin-left: 5px;" href="{% url 'productos' 'crear' 0 %}" class="btn btn-secondary btn-design1">Mantenedor de productos</a>
+            <a style="margin-left: 5px;" href="{% url 'ventas' %}" class="btn btn-secondary btn-design1">Historial de ventas</a>
+            <a style="margin-left: 5px; margin-right: 5px;" href="{% url 'bodega' %}" class="btn btn-secondary btn-design1">Mantenedor de bodega</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+{% endblock %}
