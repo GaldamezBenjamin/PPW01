@@ -44,7 +44,13 @@
               <td> {{ boleta.fecha_entrega|formatear_fecha }} </td>
               <td> {{ boleta.subscrito }} </td>
               <td> {{ boleta.total_a_pagar|formatear_dinero }} </td>
-              <td> {{ boleta.estado }} </td>
+              <td>
+                {% if boleta.estado == 'Anulado' %}
+                  <span style="color: red;">{{ boleta.estado }}</span>
+                {% else %}
+                  {{ boleta.estado }}
+                {% endif %}
+              </td>
 
             <td>
               <a href="{% url 'boleta' boleta.nro_boleta %}" class="btn btn-sm btn-secondary btn-design1" style="font-style: normal;">Detalle</a>
