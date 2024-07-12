@@ -16,7 +16,7 @@
   <!-- Tabla de Ventas -->
   <h1>Historial de compras</h1>
   <div class="container mt-5">
-    <table class="table table-dark table-striped mt-5 tableinfo">
+    <table id="tabla-principal" class="table table-hover table-dark">
       <thead>
         <tr>
           <th scope="col"> Nro Boleta </th>
@@ -31,7 +31,7 @@
       <tbody>
         {% for boleta in historial %}
           {% if boleta.estado == 'Anulado' %}
-            <tr class="letra-boleta-anulada"> 
+            <tr class="letra-boleta-anulada">
           {% else %}
             <tr>
           {% endif %}
@@ -42,7 +42,7 @@
             <td> {{ boleta.total_a_pagar|formatear_dinero }} </td>
             <td> {{ boleta.estado }} </td>
             <td>
-                <a href="{% url 'boleta' boleta.nro_boleta %}" class="btn btn-sm btn-primary btn-design3" style="font-style: normal;">Detalle</a>
+              <a href="{% url 'boleta' boleta.nro_boleta %}" class="btn btn-sm btn-secondary btn-design3" style="font-style: normal;">Detalle</a>
             </td>
           </tr>
         {% endfor %}

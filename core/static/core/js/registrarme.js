@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
   // Asignar placeholders para ayudar a los usuarios
-  $('#id_username').attr('placeholder', 'Ej: cgomezv, cevans, sjohasson');
-  $('#id_first_name').attr('placeholder', 'Ej: Cristián, Chris, Scarlett');
-  $('#id_last_name').attr('placeholder', 'Ej: Gómez Vega, Evans, Johansson');
-  $('#id_email').attr('placeholder', 'Ej: cevans@marvels.com');
+  $('#id_username').attr('placeholder', 'Ej: jtorres, xmolina, mgarrido');
+  $('#id_first_name').attr('placeholder', 'Ej: Juana, Xavier, María');
+  $('#id_last_name').attr('placeholder', 'Ej: Torres, Molina, Garrido');
+  $('#id_email').attr('placeholder', 'Ej: jtorres@mail.com');
   $('#id_password1').attr('placeholder', '8 caracteres como mínimo');
   $('#id_password2').attr('placeholder', 'Repetir la contraseña escogida');
   $('#id_rut').attr('placeholder', 'Ej: 11111111-1 (sin puntos y con guión)');

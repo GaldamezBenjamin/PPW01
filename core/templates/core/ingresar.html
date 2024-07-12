@@ -32,33 +32,4 @@
 
 {% block script %}
   <script src="{% static 'core/js/ingresar.js' %}"></script>
-  {% comment %} <script>
-    $(document).ready(function () {
-      $("#formulario-ingreso").validate({
-        rules: {
-          username: {
-            required: true,
-          },
-          password: {
-            required: true,
-            minlength: 5,
-            maxlength: 15,
-          },
-        },
-        messages: {
-          username: {
-            required: "Este campo es obligatorio",
-          },
-          password: {
-            required: "Este campo es obligatorio",
-            minlength: "La contraseña debe tener al menos 5 caracteres.",
-            maxlength: "La contraseña debe tener menos de 15 caracteres.",
-          },
-        },
-        submitHandler: function(form) {
-          form.submit();
-        }
-      });
-    });
-  </script> {% endcomment %}
 {% endblock script %}

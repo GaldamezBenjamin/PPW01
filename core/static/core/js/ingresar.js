@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   // Asignar placeholders para ayudar a los usuarios
-  $('#id_username').attr('placeholder', 'Ej: cgomezv, cevans, sjohasson');
+  $('#id_username').attr('placeholder', 'Ej: jtorres, xmolina, mgarrido');
   $('#id_password').attr('placeholder', 'Ingresa tu contraseña actual');
 
   $('#form').validate({ 
@@ -30,7 +30,7 @@ $(document).ready(function() {
   $('#user-select').change(function() {
     var username = $(this).val();
     var password = 'Duoc@123';
-    if ('cevans eolsen tholland sjohansson cpratt mruffalo super'.includes(username)) {
+    if ('jtorres xmolina mgarrido mrojas egutierrez alozano super'.includes(username)) {
       password = '123';
     };
     $('#id_username').val(username);

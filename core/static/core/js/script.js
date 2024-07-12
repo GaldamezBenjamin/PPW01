@@ -30,7 +30,7 @@ $(document).ready(function () {
         $('#id_subscrito').wrap('<div class="col-sm-1" id="checkbox-subscrito"></div>');
         $('#checkbox-subscrito').after('<div id="help_text_id_subscrito" class="col-sm-11"></div>');
         $('#help_text_id_subscrito').text(`Deseo subscribirme con un aporte
-          de $3.000 mensuales a la fundación "Help a Brother" y obtner un 
+          de $3.000 mensuales a la fundación "Help a Brother" y obtener un 
           5% de descuento en todas mis compras.`);
     }
 
@@ -46,14 +46,6 @@ $(document).ready(function () {
           }
         });
     }
-
-    if ($('#carousel-indicators').length > 0) {
-        const myCarouselElement = document.querySelector('#carousel-indicators');
-        const carousel = new bootstrap.Carousel(myCarouselElement, {
-          interval: 10,
-          touch: false
-        });
-      };
 
     $.validator.addMethod("rutChileno", function(value, element) {
         value = value.replace(/[.-]/g, "");

@@ -2,7 +2,7 @@
 body {
   position: relative;
   padding-bottom: 100px;
-  background-image: url(../img/fondoprueba2.jpg);
+  background-image: url(../img/fondo.jpg);
 }
 
 /* Estilos para los enlaces */
@@ -382,4 +382,9 @@ div.dataTables_wrapper div.dataTables_info div.dataTables_length div.dataTables_
 div.dataTables_wrapper div.dataTables_length select {
   width: auto;
   display: inline-block;
+}
+
+.table-hover .letra-boleta-anulada td {
+  color: red !important;
+  font-weight: bold !important;
 }
