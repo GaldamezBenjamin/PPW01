@@ -36,10 +36,10 @@
                             <div class="mb-2 text-center">
                                 {% if form.imagen.value %}
                                     <img id="cuadro-imagen" src="/media/{{ form.imagen.value }}" class="img-thumbnail me-3"
-                                    style="width: 250px; height: auto; object-fit: cover; background-color: #1A1A1A;">
+                                    style="width: auto; height: 350px; object-fit: cover; background-color: #1A1A1A;">
                                 {% else %}
-                                    <img id="cuadro-imagen" src="{% static 'core/img/sin-imagen.png' %}" class="img-thumbnail me-3"
-                                    style="width: 250px; height: auto; object-fit: cover; background-color: #1A1A1A;">
+                                    <img id="cuadro-imagen" src="{% static 'core/img/prod-sin-imagen.png' %}" class="img-thumbnail me-3"
+                                    style="width: auto; height: 350px; object-fit: cover; background-color: #1A1A1A;">
                                 {% endif %}
                             </div>
                         </div>
@@ -48,7 +48,7 @@
             </table>
           <div class="mt-2 mb-3 text-center">
             <button type="submit" class="btn btn-primary btn-lg btn-design1"> Agregar </button>
-            <button type="reset" class="btn btn-warning btn-lg btn-design1" onclick="document.getElementById('cuadro-imagen').src='{% static 'core/img/sin-imagen.png' %}';"> Nuevo </button>
+            <button type="reset" class="btn btn-warning btn-lg btn-design1" onclick="document.getElementById('cuadro-imagen').src='{% static 'core/img/prod-sin-imagen.png' %}';"> Nuevo </button>
           </div>
         </form>
     </div>

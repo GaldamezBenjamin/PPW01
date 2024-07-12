@@ -637,5 +637,5 @@ def poblar(request):
     # Opcionalmente se le puede enviar un correo único, para que los Administradores
     # del sistema puedan probar el cambio de password de los usuarios, en la página
     # de "Adminstración de usuarios".
-    poblar_bd('j.perez@duocuc.cl')
+    poblar_bd('ejemplo@correo.com')
     return redirect(index)

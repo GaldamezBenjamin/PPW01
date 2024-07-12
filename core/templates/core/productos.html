@@ -27,10 +27,10 @@
                 <div class="mb-2 text-center">
                   {% if form.imagen.value %}
                     <img id="cuadro-imagen" src="/media/{{ form.imagen.value }}" class="img-thumbnail me-3"
-                    style="width: 250px; height: auto; object-fit: cover; background-color: #1A1A1A;">
+                    style="width: auto; height: 350px; object-fit: cover; background-color: #1A1A1A;">
                   {% else %}
-                    <img id="cuadro-imagen" src="{% static 'core/img/sin-imagen.png' %}" class="img-thumbnail me-3"
-                    style="width: 250px; height: auto; object-fit: cover; background-color: #1A1A1A;">
+                    <img id="cuadro-imagen" src="{% static 'core/img/prod-sin-imagen.png' %}" class="img-thumbnail me-3"
+                    style="width: auto; height: 350px; object-fit: cover; background-color: #1A1A1A;">
                   {% endif %}
                 </div>
               </div>
