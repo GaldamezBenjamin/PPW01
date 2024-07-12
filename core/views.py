@@ -279,9 +279,13 @@ def usuarios(request, accion, id):
     if request.method == 'GET':
 
         if accion == 'eliminar':
-            eliminado, mensaje = eliminar_registro(User, id)
-            messages.success(request, mensaje)
-            return redirect(usuarios, 'crear', '0')
+            if usuario.is_superuser:
+                messages.error(request, 'No es posible eliminar al usuario.')
+                return redirect(usuarios, 'crear', '0')
+            else:
+                eliminado, mensaje = eliminar_registro(User, id)
+                messages.success(request, mensaje)
+                return redirect(usuarios, 'crear', '0')
         else:
             form_usuario = UsuarioForm(instance=usuario)
             form_perfil = PerfilForm(instance=perfil)
